@@ -176,7 +176,7 @@ revolution_e5 = function(radius, delta, name) {
   theta_e5 += diff;
 }
 
-camera.position.z = 50;
+camera.position.z = 45;
 
 
 function boron_model() {
@@ -391,25 +391,45 @@ function animate() {
      console.log('Hydrogen');
      hydrogen_model();
      document.getElementById('hydrogen_text').style.display = 'block';
+     document.getElementById('helium_text').style.display = 'none';
+     document.getElementById('lithium_text').style.display = 'none';
+     document.getElementById('beryllium_text').style.display = 'none';
+     document.getElementById('boron_text').style.display = 'none';
    }
    else if (intersects[0].object.geometry.id == '4') {
      console.log('helium');
      helium_model();
+     document.getElementById('hydrogen_text').style.display = 'none';
      document.getElementById('helium_text').style.display = 'block';
+     document.getElementById('lithium_text').style.display = 'none';
+     document.getElementById('beryllium_text').style.display = 'none';
+     document.getElementById('boron_text').style.display = 'none';
    }
    else if (intersects[0].object.geometry.id == '6') {
      console.log('lithium');
      lithium_model();
+     document.getElementById('hydrogen_text').style.display = 'none';
+     document.getElementById('helium_text').style.display = 'none';
      document.getElementById('lithium_text').style.display = 'block';
+     document.getElementById('beryllium_text').style.display = 'none';
+     document.getElementById('boron_text').style.display = 'none';
    }
    else if (intersects[0].object.geometry.id == '8') {
      console.log('beryllium');
      beryllium_model();
+     document.getElementById('hydrogen_text').style.display = 'none';
+     document.getElementById('helium_text').style.display = 'none';
+     document.getElementById('lithium_text').style.display = 'none';
      document.getElementById('beryllium_text').style.display = 'block';
+     document.getElementById('boron_text').style.display = 'none';
    }
    else if (intersects[0].object.geometry.id == '10') {
      console.log('beryllium');
      boron_model();
+     document.getElementById('hydrogen_text').style.display = 'none';
+     document.getElementById('helium_text').style.display = 'none';
+     document.getElementById('lithium_text').style.display = 'none';
+     document.getElementById('beryllium_text').style.display = 'none';
      document.getElementById('boron_text').style.display = 'block';
    }
    else {
